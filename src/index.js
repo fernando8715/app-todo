@@ -1,11 +1,14 @@
 
 //El import hago referencia al archivo js que esta en la carpeta js
-import {saludar} from './js/componentes'; 
 import './styles.css';
 
-const nombre = 'Fernando';
+import {Todo, TodoList} from './classes';
+import { crearTodoHtml } from './js/componentes';
 
-saludar(nombre);
+export const todoList = new TodoList();
+
+// es lo mismo   todoList.todos.forEach( todo => crearTodoHtml (todo) )
+todoList.todos.forEach( crearTodoHtml );  
 
 
 
